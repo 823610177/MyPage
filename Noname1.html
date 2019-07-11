@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>图片翻转</title>
+  <style>
+ *{margin:0px;}
+ .photo
+ {
+  width:940px;
+  height:300px;
+  /*background-color:#ffccff;*/
+  margin:100px auto;
+ }
+.photo ul
+{
+ display:flex;
+ justify-content:space-between;
+ list-style:none;
+ width:100%;
+ height:100%;
+/* background-color:#66ccff;*/
+}
+.photo ul li
+{
+ position:relative;
+ width:300px;
+ height:300px;
+/* background-color:red;*/
+ perspective:1000px;
+}
+.photo ul li p
+ {
+  position:absolute;
+  top:0;
+  width:300px;
+  height:210px;
+  background-color:black;
+  color:#fff;
+  padding-top:90px;
+  text-align:center;
+  transform:rotateY(90deg);
+  transition:1s;
+ }
+ .photo ul li:hover p
+ {
+  transform:rotateY(0deg);
+   transition:1s;
+ }
+ .photo ul li:hover img
+ {
+  transform:rotateY(-90deg);
+  transition:1s;
+ }
+</style>
+ </head>
+ <body>
+  <div class="photo">
+   <ul>
+    <li>
+	 <img src="images/1.jpg">
+	 <p>I arem ipsum dolor sit ament,consectetur adipiscing elit.Vivamus vitae libero ord.Lorem ipsum dolor sit ament.consectetur adipiscing elit.Nunc sed vestibulum</p>
+	</li>
+	<li>
+	 <img src="images/2.jpg">
+	 <p>I arem ipsum dolor sit ament,consectetur adipiscing elit.Vivamus vitae libero ord.Lorem ipsum dolor sit ament.consectetur adipiscing elit.Nunc sed vestibulum</p>
+	</li>
+	<li>
+	 <img src="images/3.jpg">
+	 <p>I arem ipsum dolor sit ament,consectetur adipiscing elit.Vivamus vitae libero ord.Lorem ipsum dolor sit ament.consectetur adipiscing elit.Nunc sed vestibulum</p>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>
